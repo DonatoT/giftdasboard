@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title> Beyonic </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="./assets/style.css">
+  </head>
+
+  <body>
+    
+      <div class="root">
+        <nav class="main-nav">
+          <div class="logo">
+            <a href=""> <img src="./assets/images/Logo.svg" alt="Logo"></a>
+          </div>
+          <div class="side-bar">
+            <div class="menu">
+              <div class="item">
+                <a href="#" class="tablinks" onclick="openpage(event, 'Dashboard')" id="defaultOpen" > 
+                  <i class="fa-solid fa-house"> </i> Dashboard 
+                </a>
+              </div>
+
+              <div class="item">
+                <a class="sub-btn" href="#" class="tablinks" onclick="openpage(event, 'Balance')" >
+                  <i class="fa-sharp fa-solid fa-dollar-sign"></i> Balance 
+                  <i class="fa-solid fa-chevron-down dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Balance1')">Balance1</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Balance2')">Balance2</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Balance3')">Balance3</a>
+                </div>
+              </div>
+
+              <div class="item">
+                <a class="sub-btn" href="#" class="tablinks" onclick="openpage(event, 'Transactions')" > 
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i> Transactions 
+                  <i class="fa-solid fa-chevron-down dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Transaction1')">Transaction1</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Transaction2')">Transaction2</a>
+                </div>
+              </div>
+
+              <span class="Name"></span>
+              <div class="item">
+                <a href="#" class="tablinks" onclick="openpage(event, 'Organization')" > 
+                  <i class="fa-regular fa-circle"></i> Organization 
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="#" class="tablinks" onclick="openpage(event, 'Groups')" > 
+                  <i class="fa-solid fa-user-group"></i> Groups 
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="#" class="tablinks" onclick="openpage(event, 'Zones')" >
+                  <i class="fa-solid fa-globe"></i> Zones 
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="#" class="tablinks" onclick="openpage(event, 'Settings')"> 
+                  <i class="fa-solid fa-gear"></i> Settings
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </nav>
+        
+        <div class="main-page"> 
+          <div id="Dashboard" class="tabcontent">
+            <p>1</p>
+            <h3>Dashboard</h3>
+          </div>
+          
+          <div id="Balance" class="tabcontent">
+            <p>2</p>
+            <h3>Balance</h3>
+          </div>
+          
+          <div id="Balance1" class="tabcontent">
+            <p>2-1</p>
+            <h3>Balance1</h3>
+          </div>
+
+          <div id="Balance2" class="tabcontent">
+            <p>2-2</p>
+            <h3>Balance2</h3>
+          </div>
+
+          <div id="Transactions" class="tabcontent">
+            <p>3</p>
+            <h3>Transactions</h3>
+          </div>
+          
+          <div id="Transaction1" class="tabcontent">
+            <p>3-1</p>
+            <h3>Transaction1</h3>
+          </div>
+
+          <div id="Transaction2" class="tabcontent">
+            <p>3-2</p>
+            <h3>Transaction2</h3>
+          </div>
+
+          <div id="Organization" class="tabcontent">
+            <p>4</p>
+            <h3>Organization</h3>
+          </div>
+          
+          <div id="Groups" class="tabcontent">
+            <p>5</p>
+            <h3>Groups</h3>
+          </div>
+          
+          <div id="Zones" class="tabcontent">
+            <p>6</p>
+            <h3>Zones</h3>
+          </div>
+
+          <div id="Settings" class="tabcontent">
+            <p>7</p>
+            <h3>Settings</h3>
+          </div>
+        </div> 
+      </div>
+
+      <script src="./assets/js/router.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.sub-btn').click(function() {
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate')
+          });
+        });
+      </script>
+      <script src="https://kit.fontawesome.com/8a7fcfb3db.js" crossorigin="anonymous"></script>
+  </body>
+  </html> 
+  
