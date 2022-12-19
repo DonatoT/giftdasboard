@@ -6,39 +6,40 @@
 		<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-		<link rel="stylesheet" href="./assets/style.css">
+		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/DashBoard-Style.css">
   </head>
 
   <body>
-    
       <div class="root">
         <nav class="main-nav">
           <div class="logo">
             <a href=""> <img src="./assets/images/Logo.svg" alt="Logo"></a>
           </div>
           <div class="side-bar">
+
             <div class="menu">
               <div class="item">
                 <a href="#" class="tablinks" onclick="openpage(event, 'Dashboard')" id="defaultOpen" > 
-                  <i class="fa-solid fa-house"> </i> Dashboard 
+                  <i class='bx bx-home'></i> Dashboard 
                 </a>
               </div>
 
               <div class="item">
-                <a class="sub-btn" href="#" class="tablinks" onclick="openpage(event, 'Balance')" >
-                  <i class="fa-sharp fa-solid fa-dollar-sign"></i> Balance 
+                <a href="#" class="tablinks" onclick="openpage(event, 'Balance')">
+                  <i class='bx bx-dollar-circle' ></i> Balance 
                   <i class="fa-solid fa-chevron-down dropdown"></i>
                 </a>
                 <div class="sub-menu">
                   <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Balance1')">Balance1</a>
                   <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Balance2')">Balance2</a>
-                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Balance3')">Balance3</a>
                 </div>
               </div>
 
               <div class="item">
-                <a class="sub-btn" href="#" class="tablinks" onclick="openpage(event, 'Transactions')" > 
-                  <i class="fa-solid fa-arrow-right-arrow-left"></i> Transactions 
+                <a href="#" class="tablinks" onclick="openpage(event, 'Transactions')" > 
+                  <i class='bx bx-transfer-alt'></i> Transactions 
                   <i class="fa-solid fa-chevron-down dropdown"></i>
                 </a>
                 <div class="sub-menu">
@@ -47,39 +48,309 @@
                 </div>
               </div>
 
-              <span class="Name"></span>
+              <div class="item">
+                <a href="#" class="tablinks" onclick="openpage(event, 'Transactions')" > 
+                  <i class='bx bx-transfer-alt'></i> Transactions 
+                  <i class="fa-solid fa-chevron-down dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Transaction1')">Transaction1</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Transaction2')">Transaction2</a>
+                </div>
+              </div>
+
               <div class="item">
                 <a href="#" class="tablinks" onclick="openpage(event, 'Organization')" > 
-                  <i class="fa-regular fa-circle"></i> Organization 
+                  <i class='bx bx-circle'></i> Organization 
                 </a>
               </div>
 
               <div class="item">
                 <a href="#" class="tablinks" onclick="openpage(event, 'Groups')" > 
-                  <i class="fa-solid fa-user-group"></i> Groups 
+                  <i class='bx bx-group'></i> Groups 
                 </a>
               </div>
 
               <div class="item">
                 <a href="#" class="tablinks" onclick="openpage(event, 'Zones')" >
-                  <i class="fa-solid fa-globe"></i> Zones 
+                  <i class='bx bx-globe'></i> Zones 
                 </a>
               </div>
 
               <div class="item">
                 <a href="#" class="tablinks" onclick="openpage(event, 'Settings')"> 
-                  <i class="fa-solid fa-gear"></i> Settings
+                  <i class='bx bx-cog' ></i> Settings
                 </a>
               </div>
 
             </div>
           </div>
+          <div class="profil">
+            <div class="profil-avatar">
+              <i class='bx bx-user-circle'></i>
+            </div>
+            <div class="profil-info">
+              <div class="profil-info-name"> John Kowalski </div>
+              <div class="profil-info-job"> Administrator </div>
+            </div>
+          </div>
         </nav>
-        
+
         <div class="main-page"> 
           <div id="Dashboard" class="tabcontent">
-            <p>1</p>
-            <h3>Dashboard</h3>
+            <!-- ============= Header Section =============== -->
+
+            <header>
+              <button class="Header-BtnRight" type="button">
+                  <i class='bx bx-left-arrow-alt'></i>
+              </button>
+              <label for="Header-Input">Transaction</label>
+              <input type="search" name="" id="Home-HeaderInput">
+              <button class="Header-BtnLeft" type="reset">
+                  <i class="fa-solid fa-xmark"></i>
+              </button>
+              <button class="Header-BtnHelp">
+                  <i class='bx bx-help-circle'></i>
+              </button>
+          </header>
+          <!-- =============  Fin Header  =============== -->
+
+          <!-- =============  CountryOfInterest &  Edit Transaction =============== -->
+          <section class="TableauDeTri">
+              <div class="block1">
+                  <h4>Country Of Interest</h4>
+                  <div class="trait"></div>
+                  <select name="" id="CountryOfInterest">
+                      <option value="">Kenya</option>
+                      <option value="">Cameroon</option>
+                      <option value="">Ouganda</option>
+                      <option value="">South Africa</option>
+                      <option value="">Nigeria</option>
+                  </select>
+              </div>
+
+              <div class="block1">
+                  <h4>Edit Transaction</h4>
+                  <div class="trait"></div>
+                  <p>Edit the transaction below to match the right information.</p>
+              </div>
+          <!-- ============= Fin CountryOfInterest &  Edit Transaction =============== -->
+
+          <!-- =============  partie contenant les différents filtres et la div date =============== -->
+
+          <div class="Search-Filter-ExportAs">
+                          <!-- =============  Partie de gauche =============== -->
+
+                  <div class="Left">
+                      <select name="" id="">
+                          <option value="">Local</option>
+                          <option value=""></option>
+                          <option value=""></option>
+                      </select>
+                      <div class="trait"></div><!--le long trait noir-->
+                      <div>
+                          <button type="button"><!--le search button-->
+                              <i class="fa-solid fa-magnifying-glass"></i>
+                          </button>
+                          <input type="search" name="" id="" placeholder="search">
+                      </div>
+                  </div>
+
+                  <!--partie de droite contenant ExportsAS Filter et l'intervalle de date-->
+                  <div class="Right">
+
+                      <div class="items" id="items1">
+                          <label for="filter-Select">
+                              <i class='bx bx-filter-alt'></i>
+                              <span>Filter</span>
+                          </label>
+                          <i class='bx bx-chevron-down'></i>
+                          <ul class="sous-liste">
+                              <li class="items-sous-liste">Value Date</li>
+                              <li class="items-sous-liste">Tansaction ID</li>
+                              <li class="items-sous-liste">Movement type</li>
+                              <li class="items-sous-liste">Amount</li>
+                          </ul>
+                      </div>
+                      <div class="items" id="items2">
+                          <input type="checkbox" name="" id="checked">
+                          <label for="checked">
+                              <i class='bx bx-file-blank'></i>
+                              <span>Exports as</span>
+                          </label>
+                          <i class='bx bx-chevron-down'></i>
+                          <ul class="sous-liste">
+                              <li class="items-sous-liste">lorem</li>
+                              <li class="items-sous-liste">lorem</li>
+                              <li class="items-sous-liste">lorem</li>
+                          </ul>
+                      </div>
+
+                      <div class="Calender">
+                          <i class='bx bx-calendar' ></i>
+                          <span class="StartDate">StartDate</span>
+                          <span>-</span>
+                          <span class="EndDate">EndDate</span>
+                      </div>
+                  </div>
+              </div>
+          <!-- ============= Fin partie contenant les différents filtres et la div date =============== -->
+          <!-- =============  Tableau affichage des resultats de tri=============== -->
+          <section class="AffichageTri">
+                  <table>
+                      <tr>
+                          <th><label for="checked"><input type="checkbox" name="" id=""></label></th>
+                          <th>Value Date</th>
+                          <th>Transaction ID
+                              <i class='bx bx-down-arrow-alt' ></i>
+                          </th>
+                          <th>Movement type</th>
+                          <th>Amount</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                      </tr>
+                      <tr class="Resultat">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-14</td>
+                          <td>1480636587</td>
+                          <td>Money Transfer</td>
+                          <td><span>●●●●●●●●●</span><i class='bx bx-low-vision' ></i></td>
+                          <td id="Active">Active</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-15</td>
+                          <td>1480636588</td>
+                          <td>Airtime</td>
+                          <td>1,500.000 UGX</i><i class="fa-regular fa-eye" id="eyeNoSlash"></i></td>
+                          <td id="Error">Error</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="Resultat">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-16</td>
+                          <td>1480636589</td>
+                          <td>Money Transfer</td>
+                          <td><span>●●●●●●●●●</span><button><i class='bx bx-low-vision' ></button></i></td>
+                          <td id="Active">Active</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-17</td>
+                          <td>1480636590</td>
+                          <td>Collection</td>
+                          <td><span>●●●●●●●●●</span></i><button><i class='bx bx-low-vision' ></button></td>
+                          <td id="Error">Error</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="Resultat">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-18</td>
+                          <td>1480636591</td>
+                          <td>Airtime</td>
+                          <td><span>●●●●●●●●●</span><button><i class='bx bx-low-vision' ></button></td>
+                          <td id="Active">Active</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-19</td>
+                          <td>1480636592</td>
+                          <td>Airtime</td>
+                          <td><span>●●●●●●●●●</span></i><button><i class='bx bx-low-vision' ></button></i></td>
+                          <td id="Error">Error</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="Resultat">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-20</td>
+                          <td>1480636593</td>
+                          <td>Money Transfer</td>
+                          <td><span>●●●●●●●●●</span><button><i class='bx bx-low-vision' ></button></i></td>
+                          <td id="Active">Active</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-21</td>
+                          <td>1480636594</td>
+                          <td>Money Transfer</td>
+                          <td><span>●●●●●●●●●</span></i><button><i class='bx bx-low-vision' ></button></td>
+                          <td id="Error">Error</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="Resultat">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-22</td>
+                          <td>1480636595</td>
+                          <td>Airtime</td>
+                          <td><span>●●●●●●●●●</span><button><i class='bx bx-low-vision' ></button></td>
+                          <td id="Active">Active</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-23</td>
+                          <td>1480636596</td>
+                          <td>Money Transfer</td>
+                          <td><span>●●●●●●●●●</span><button><i class='bx bx-low-vision' ></button></td>
+                          <td id="Error">Error</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="Resultat">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-24</td>
+                          <td>1480636597</td>
+                          <td>Airtime</td>
+                          <td><span>●●●●●●●●●</span></i><button><i class='bx bx-low-vision' ></button></td>
+                          <td id="Error">Error</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                            <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      <tr class="">
+                          <td><input type="checkbox" name="" id="checked"></td>
+                          <td>2022-01-25</td>
+                          <td>148063658</td>
+                          <td>Money Transfer</td>
+                          <td><span>●●●●●●●●●</span><button><i class='bx bx-low-vision' ></button></td>
+                          <td id="Active">Active</td>
+                          <td><button><i class='bx bx-edit' ></i></button>
+                              <button><i class='bx bxs-trash'></i></button>
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </section>
+          </section>
+          <footer>
+              <div class="trait"></div>
+              <button id="footer-button1">Continue</button>
+              <button id="footer-button2">Skip</button>
+              <button id="footer-button3">Cancel</button>
+          </footer>
           </div>
           
           <div id="Balance" class="tabcontent">
@@ -134,16 +405,16 @@
         </div> 
       </div>
 
+      <script src="./assets/js/links.js"></script>
       <script src="./assets/js/router.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
-          $('.sub-btn').click(function() {
+          $('.tablinks').click(function() {
             $(this).next('.sub-menu').slideToggle();
             $(this).find('.dropdown').toggleClass('rotate')
           });
         });
       </script>
-      <script src="https://kit.fontawesome.com/8a7fcfb3db.js" crossorigin="anonymous"></script>
   </body>
   </html> 
   

@@ -10,7 +10,7 @@
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(page).style.display = "block";
-    evt.currentTarget.className += " active";
+    evt.currentTarget.className += "active";
   }
   document.getElementById("defaultOpen").click();
   

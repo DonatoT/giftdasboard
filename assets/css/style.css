@@ -1,0 +1,117 @@
+
+ body {
+    margin: 0px;
+    padding: 0px;
+  }
+    
+  .root {
+    display: flex;
+    width: 100%;
+}
+  
+  .logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 20%;
+    height: 100vh;
+    background-color: rgba(0, 31, 48, 1);
+  }
+
+  .side-bar .menu {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  .side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .side-bar .menu .item a {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 20px;
+    line-height: 30px;
+  }
+
+  .side-bar .menu .item a:hover {
+    background: rgb(156, 176, 190);
+  }
+
+  #defaultOpen {
+    color: rgba(255, 157, 65, 1);
+  } 
+
+  .side-bar .menu .item i {
+    margin-right: 25px;
+    text-align: center;
+  }
+
+  .side-bar .menu .item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 6px;
+  }
+
+  .side-bar .menu .item .sub-menu {
+    display: none;
+    background-color: rgba(0, 31, 48, 1);
+  }
+
+  .side-bar .menu .item .sub-menu a {
+    padding-left: 70px;
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+
+  .profil {
+    display: flex; 
+    width: 270px;
+    background-color: rgba(0, 31, 48, 1);
+    color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top: 565px;
+    bottom: 0;
+  }
+  
+  .profil-avatar {
+    margin-left: 35px;
+    margin-top: 15px;
+  }
+
+  .profil-info {
+    width: 70%;
+    margin-left: 20px;
+  }
+
+  .profil-info-name {
+    font-size: 120%;
+  }
+
+  .profil-info-job {
+    font-size: 90%;
+  }
+
+  .main-page {
+    position: relative;
+    left: 20%;
+    top: 0;
+    width: 80%;
+  }
+
+
+  /*======================MenuListes===========================  */
+  
