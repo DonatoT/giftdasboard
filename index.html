@@ -8,7 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/DashBoard-Style.css">
+    <link rel="stylesheet" href="./assets/css/DashBoard.css">
+    <link rel="stylesheet" href="./assets/css/Balance.css">
   </head>
 
   <body>
@@ -21,64 +22,64 @@
 
             <div class="menu">
               <div class="item">
-                <a href="#" class="tablinks" onclick="openpage(event, 'Dashboard')" id="defaultOpen" > 
+                <a href="#" class="tablinks" onclick="openPage(event, 'Dashboard')" id="defaultOpen" > 
                   <i class='bx bx-home'></i> Dashboard 
                 </a>
               </div>
 
               <div class="item">
-                <a href="#" class="tablinks" onclick="openpage(event, 'Balance')">
+                <a href="#" class="tablinks" onclick="openPage(event, 'Balance')">
                   <i class='bx bx-dollar-circle' ></i> Balance 
                   <i class="fa-solid fa-chevron-down dropdown"></i>
                 </a>
                 <div class="sub-menu">
-                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Balance1')">Balance1</a>
-                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Balance2')">Balance2</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openPage(event, 'Balance1')">Balance1</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openPage(event, 'Balance2')">Balance2</a>
                 </div>
               </div>
 
               <div class="item">
-                <a href="#" class="tablinks" onclick="openpage(event, 'Transactions')" > 
+                <a href="#" class="tablinks" onclick="openPage(event, 'Transactions')" > 
                   <i class='bx bx-transfer-alt'></i> Transactions 
                   <i class="fa-solid fa-chevron-down dropdown"></i>
                 </a>
                 <div class="sub-menu">
-                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Transaction1')">Transaction1</a>
-                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Transaction2')">Transaction2</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openPage(event, 'Transaction1')">Transaction1</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openPage(event, 'Transaction2')">Transaction2</a>
                 </div>
               </div>
 
               <div class="item">
-                <a href="#" class="tablinks" onclick="openpage(event, 'Transactions')" > 
+                <a href="#" class="tablinks" onclick="openPage(event, 'Transactions')" > 
                   <i class='bx bx-transfer-alt'></i> Transactions 
                   <i class="fa-solid fa-chevron-down dropdown"></i>
                 </a>
                 <div class="sub-menu">
-                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Transaction1')">Transaction1</a>
-                  <a href="#" id="sub-item" class="tablinks" onclick="openpage(event, 'Transaction2')">Transaction2</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openPage(event, 'Transaction1')">Transaction1</a>
+                  <a href="#" id="sub-item" class="tablinks" onclick="openPage(event, 'Transaction2')">Transaction2</a>
                 </div>
               </div>
 
               <div class="item">
-                <a href="#" class="tablinks" onclick="openpage(event, 'Organization')" > 
+                <a href="#" class="tablinks" onclick="openPage(event, 'Organization')" > 
                   <i class='bx bx-circle'></i> Organization 
                 </a>
               </div>
 
               <div class="item">
-                <a href="#" class="tablinks" onclick="openpage(event, 'Groups')" > 
+                <a href="#" class="tablinks" onclick="openPage(event, 'Groups')" > 
                   <i class='bx bx-group'></i> Groups 
                 </a>
               </div>
 
               <div class="item">
-                <a href="#" class="tablinks" onclick="openpage(event, 'Zones')" >
+                <a href="#" class="tablinks" onclick="openPage(event, 'Zones')" >
                   <i class='bx bx-globe'></i> Zones 
                 </a>
               </div>
 
               <div class="item">
-                <a href="#" class="tablinks" onclick="openpage(event, 'Settings')"> 
+                <a href="#" class="tablinks" onclick="openPage(event, 'Settings')"> 
                   <i class='bx bx-cog' ></i> Settings
                 </a>
               </div>
@@ -414,6 +415,7 @@
             $(this).find('.dropdown').toggleClass('rotate')
           });
         });
+
       </script>
   </body>
   </html> 
