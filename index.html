@@ -9,6 +9,7 @@
 		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/DashBoard.css">
+    <link rel="stylesheet" href="./assets/css/pagination.css">
     <link rel="stylesheet" href="./assets/css/Balance.css">
   </head>
 
@@ -210,18 +211,18 @@
                           <th>Status</th>
                           <th>Action</th>
                       </tr>
-                      <tr class="Resultat">
+                      <tr class="Resultat" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-14</td>
                           <td>1480636587</td>
                           <td>Money Transfer</td>
                           <td><span>●●●●●●●●●</span><i class='bx bx-low-vision' ></i></td>
                           <td id="Active">Active</td>
-                          <td><button><i class='bx bx-edit' ></i></button>
+                          <td><button class="delete"><i class='bx bx-edit' ></i></button>
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="">
+                      <tr class="" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-15</td>
                           <td>1480636588</td>
@@ -232,7 +233,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="Resultat">
+                      <tr class="Resultat" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-16</td>
                           <td>1480636589</td>
@@ -243,7 +244,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="">
+                      <tr class="" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-17</td>
                           <td>1480636590</td>
@@ -254,7 +255,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="Resultat">
+                      <tr class="Resultat" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-18</td>
                           <td>1480636591</td>
@@ -265,7 +266,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="">
+                      <tr class="" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-19</td>
                           <td>1480636592</td>
@@ -276,7 +277,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="Resultat">
+                      <tr class="Resultat" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-20</td>
                           <td>1480636593</td>
@@ -287,7 +288,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="">
+                      <tr class="" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-21</td>
                           <td>1480636594</td>
@@ -298,7 +299,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="Resultat">
+                      <tr class="Resultat" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-22</td>
                           <td>1480636595</td>
@@ -309,7 +310,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="">
+                      <tr class="" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-23</td>
                           <td>1480636596</td>
@@ -320,7 +321,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="Resultat">
+                      <tr class="Resultat" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-24</td>
                           <td>1480636597</td>
@@ -331,7 +332,7 @@
                             <button><i class='bx bxs-trash'></i></button>
                           </td>
                       </tr>
-                      <tr class="">
+                      <tr class="" id="row">
                           <td><input type="checkbox" name="" id="checked"></td>
                           <td>2022-01-25</td>
                           <td>148063658</td>
@@ -348,9 +349,20 @@
           </section>
           <footer>
               <div class="trait"></div>
-              <button id="footer-button1">Continue</button>
-              <button id="footer-button2">Skip</button>
-              <button id="footer-button3">Cancel</button>
+              <div class="container">
+                <div class="pagination">
+                    <button class="btn1" onclick="backbtn()">Prev</button>
+                    <ul>
+                        <a href=""> <li class="link active " value="1" onclick="activeLink()">1</li></a>
+                        <a href=""> <li class="link" value="2" onclick="activeLink()">2</li></a>
+                        <a href=""> <li class="link" value="3" onclick="activeLink()">3</li></a>
+                        <a href=""> <li class="link" value="4" onclick="activeLink()">4</li></a>
+                        <a href=""> <li class="link" value="5" onclick="activeLink()">5</li></a>
+                    </ul>
+                    <button class="btn2" onclick="nextbtn()">Next</button>
+        
+                </div>
+            </div>
           </footer>
           </div>
           
@@ -406,8 +418,10 @@
         </div> 
       </div>
 
-      <script src="./assets/js/links.js"></script>
       <script src="./assets/js/router.js"></script>
+      <script src="./assets/js/deleteBtn.js"></script>
+      <script src="./assets/js/pagination.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
           $('.tablinks').click(function() {

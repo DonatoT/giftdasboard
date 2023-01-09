@@ -315,7 +315,13 @@ footer button {
 }
 
 
+#row:hover {
+    background: #CAECFF;
+}
 
+#row:active {
+    background: #99DBFF;
+}
 
 
 
